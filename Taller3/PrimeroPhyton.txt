@@ -1,0 +1,40 @@
+def dividendos(n):
+    primo1 = 2
+    primo2 = 3
+    primo3 = 5
+    primo4 = 7
+
+    while n % primo1 == 0:
+        n = n // primo1
+        print(n)
+
+    while n % primo2 == 0:
+        n = n // primo2
+        print(n)
+
+    while n % primo3 == 0:
+        n = n // primo3
+        print(n)
+
+    while n % primo4 == 0:
+        n = n // primo4
+        print(n)
+
+
+def main():
+    valor1 = int(input("Ingrese valor1: "))
+
+    while valor1 > 0:
+        dividendos(valor1)
+        valor1 = int(input("Ingrese valor1 nuevamente: "))
+
+    valor2 = int(input("Ingrese valor2: "))
+
+    while valor2 > 0:
+        dividendos(valor2)
+        valor2 = int(input("Ingrese valor2 nuevamente: "))
+
+    if valor1 < 0:
+        print("Error")
+
+main()

@@ -1,0 +1,37 @@
+
+def factorial(n):
+    resultado = n
+    for i in range(n - 1, 0, -1):
+        resultado = resultado * i
+    return resultado
+
+def combinacion(a, b):
+    resultado = factorial(a) / (factorial(a - b) * factorial(b))
+    return resultado
+
+def permutacion(a, b):
+    resultado = factorial(a) / factorial(a - b)
+    return resultado
+
+def segundoPunto():
+    print("Ingrese valor 1")
+    valor1 = int(input())
+
+    print("Ingrese valor 2")
+    valor2 = int(input())
+
+    print("Seleccione operacion")
+    print("1. Combinacion")
+    print("2. Permutacion")
+    valor3 = int(input())
+
+    if valor3 == 1:
+        print(combinacion(valor1, valor2))
+    elif valor3 == 2:
+        print(permutacion(valor1, valor2))
+    else:
+        print("Opción no válida")
+
+segundoPunto()
+
+
